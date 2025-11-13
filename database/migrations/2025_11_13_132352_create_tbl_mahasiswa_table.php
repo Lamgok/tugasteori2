@@ -12,10 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tbl_mahasiswa', function (Blueprint $table) {
-            // Kolom Primary Key sesuai model Mahasiswa.php
             $table->string('nim')->primary(); 
-            
-            // Kolom data mahasiswa
             $table->string('nama_mahasiswa');
             $table->string('foto_url')->nullable();
             $table->string('username')->unique();
